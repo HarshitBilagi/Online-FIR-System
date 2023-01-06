@@ -1,0 +1,81 @@
+<table>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+    <?php
+    // Connect to the MySQL database
+    $conn = mysqli_connect('localhost', 'username', 'password', 'database_name');
+    
+    // Select the database
+    mysqli_select_db($conn, 'database_name');
+    
+    // Execute a SELECT query to retrieve the data
+    $result = mysqli_query($conn, 'SELECT * FROM table_name');
+    
+    // Iterate through the rows of data
+    while ($row = mysqli_fetch_assoc($result)) {
+      echo '<tr>';
+      echo '<td>' . $row['id'] . '</td>';
+      echo '<td>' . $row['name'] . '</td>';
+      echo '<td>' . $row['email'] . '</td>';
+      echo '</tr>';
+    }
+    ?>
+  </table>
+  <?php 
+  session_start();
+  $conn = mysqli_connect('localhost','root','','fir');
+  if($conn->connect_error){
+      echo "$conn->connect_error";
+      die("Connection Failed : ". $conn->connect_error);
+  } 
+  $firstname = $_SESSION['firstname'];
+  $query = "SELECT * FROM application WHERE firstname='$firstname'";
+  $result = mysqli_query($conn,$query);
+  if($result){
+      $query1 = mysqli_fetch_assoc($result);
+      $firstname = $query1['firstname'];
+      $lastname = $query1['lastname'];
+      $gender = $query1['gender'];
+      $day = $query1['day'];  
+      $month = $query1['month'];  
+      $year = $query1['year'];  
+      $time = $query1['time'];  
+      $type = $query1['type'];  
+      $description = $query1['description'];  
+      $city = $query1['city'];  
+      $pincode = $query1['pincode'];  
+      $state = $query1['state'];  
+      $country = $query1['country'];  
+  }
+  ?>
+  
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>History</title>
+  </head>
+  <body>
+      <div>
+          <h1>Your Previous complaint History</h1>
+      <p>Firstname:<?php echo $firstname; ?></p>
+      <p>Gender: <?php echo $gender; ?></p>
+      <p>Day: <?php echo $day; ?></p>
+      <p>Month: <?php echo $month; ?></p>
+      <p>Year: <?php echo $year; ?></p>
+      <p>Time of Incident: <?php echo $time; ?></p>
+      <p>Type of Complaint: <?php echo $type; ?></p>
+      <p>Description: <?php echo $description; ?></p>
+      <p>City: <?php echo $city; ?></p>
+      <p>Pin-code: <?php echo $pincode; ?></p>
+      <p>State: <?php echo $state; ?></p>
+      <p>Country: <?php echo $country; ?></p>
+      <button onclick = "window.location.href='logout.php';">Logout</button>
+      </div>
+  </body>
+  </html>  

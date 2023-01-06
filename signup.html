@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New User Registration</title>
+    <style>
+        .main::before{
+            content : '';
+            position : absolute;
+            background : url("../bg1.jpg") no-repeat center center/cover;
+            height : 100%;
+            width : 100%;
+            z-index : -1; 
+            opacity : 0.4;
+            margin :0;
+            padding : 0;
+        }
+        .back::before{
+            margin :100ps;
+            padding : 0;
+            font-family: "Poppins", sans-serif;
+            font-size : 24px;
+            content :'';
+            background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(124,3,135,0.79));
+            position : absolute;
+            height : 100%;
+            width : 100%;
+            z-index : -1; 
+            opacity : 0.9;
+        }
+        .container{
+            position: relative;
+            color : white;
+            margin: auto;
+            width: 450px;
+            height: 560px;
+            border: 3px solid black;
+            background-color: rgb(1, 59, 99);
+            border-radius: 10px;
+            padding : 15px;
+        }
+        .title h1{
+            color : white;
+            font-size: 3.0rem;
+            text-align: center;
+        }
+        .title{
+            width: 250px;
+            height : 55px;
+            margin-left: 110px;
+            margin-right : 5px;
+            margin-bottom: 80px;
+            margin-top: 2px;
+            text-align: center;
+        }
+        .form{
+            padding : 10px;
+            text-align: center;
+            font-family: "Poppins", sans-serif;
+        }
+        input {
+            width: 250px;
+            font-family: "Poppins", sans-serif;
+            margin-left: 10px;
+            height: 20px;
+            border: 3px solid black;
+            border-radius: 3px;
+            text-align: center;
+        }
+        .signup {
+            transition: box-shadow .3s;
+            width: 150px;
+            margin-top: 10px;
+            margin-left: 150px;
+            font-size: large;
+            height: 43px;
+            border: 1px solid black;
+            border-radius: 5px;
+            background-color: rgb(1, 255, 255);
+        }
+        
+        .signup:hover {
+            box-shadow: 0 0 35px rgba(1, 255, 255, 0.5);
+        }
+        </style>
+</head>
+<body>
+    <div class="main">
+        <div class="back">
+            <div class="container">
+            <div class="title">
+                <h1>Create An Account !!</h1>
+            </div>
+            <form action="signup.php" method="post">
+                <div class="form">
+                    <label for="firstname">First Name</label>
+                    <input type="text" class="form-control" id="firstname" name="firstname">
+                </div>
+                <div class="form">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" class="form-control" id="lastname" name="lastname">
+                </div>
+                <div class="form">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password">
+                </div>
+                <div class="form">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email">
+                </div>
+                <div class="form">
+                    <label for="number">Phone Number</label>
+                    <input type="text" class="form-control" id="number" name="number">
+                </div>
+                <div class="form">
+                    <label for="aadhar">Aadhar Number</label>
+                    <input type="text" class="form-control" id="aadhar" name="aadhar">
+                </div>
+                <button class="signup" name="signup">SignUp</button>
+            </form>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

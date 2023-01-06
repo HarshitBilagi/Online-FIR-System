@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN PAGE</title>
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            font-size: 24px;
+            background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(124,3,135,0.79));
+        }
+        .main {
+            color : white;
+            margin: auto;
+            margin-top: 70px; ;
+            width: 600px;
+            height: 450px;
+            border: 3px solid black;
+            background-color: rgb(1, 59, 99);
+            border-radius: 10px;
+            padding : 15px;
+        }
+        .topic h1{
+            color : white;
+            font-size: 3.0rem;
+            text-align: center;
+        }
+        .topic{
+            width: 300px;
+            height : 55px;
+            margin: auto;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .userid {
+            margin-top: 5px;
+            text-align: center;
+            margin-bottom : 5px;
+        }
+        .password{
+            text-align: center;
+        
+        }
+        input {
+            width: 296px;
+            font-family: "Poppins", sans-serif;
+            margin-left: 30px;
+            height: 40px;
+            border: 3px solid black;
+            border-radius: 5px;
+            text-align: center;
+        }
+        label{
+            margin-left : 30px;
+        }
+        
+        .login {
+            width: 250px;
+            height: 40px;
+            margin-left: 190px;
+            margin-top: 25px;
+            background-color: rgb(1, 255, 255);
+        }
+        .forgot {
+            width: 250px;
+            height: 40px;
+            margin-left: -210px;
+            margin-top: 5px;
+            background-color: rgb(1, 255, 255);
+;
+        }
+
+        .foot{
+            height : 14px;
+            margin-bottom: 22px;
+            margin-top:12px;
+            margin-left: 12px;
+            background-color: rgb(1, 255, 255);
+
+        }
+
+        .end {
+            margin-bottom: 5px;
+            margin-left: 15px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        a {
+            color: white;
+            text-align: center;
+        }
+
+        p {
+            color : black;
+            text-align: center;
+            transition: box-shadow .3s;
+            width: 200px;
+            font-size: 1.3rem;
+            height: 33px;
+            border: 1px solid black;
+            border-radius: 5px;
+            background-color: rgb(1, 255, 255);
+            margin-top : 42px;
+        }
+        p:hover {
+            box-shadow: 0 0 35px rgba(1, 255, 255, 0.5);
+        }
+        .foot1{
+            height : 12;
+            margin-left : 400px;
+            margin-top : 12px;
+        }
+
+        button {
+            border-radius: 5px;
+            border: 1px solid black;
+            font-size: large;
+        }
+
+
+        </style>
+</head>
+<body>
+    <div class="main">
+        <div class="topic">
+            <h1>LOGIN</h1>
+        </div>
+        <form action="login.php" method="post">
+        <div class="userid">
+            <label for="firstname">First Name</label><br>
+            <input type="text" class="firstname" id="firstname" name="firstname" placeholder="Enter your first name here"><br>
+        </div>
+        <div class="password">
+            <label for="password">Password</label><br>
+            <input type="text" class="password" id="password" name="password" placeholder="Enter your password here"><br>
+        </div>
+        <button id="p" type="submit" name="login-submit" class="login">Login</button>
+        <div class="end">
+            <a href="forgotpass.html">Forgot Password?</a>
+        </div>
+        <div class="end">
+            <a href="signup.html">New User?Create an Account</a>
+        </div>
+    </form>
+    </div>
+</body>
+</html>

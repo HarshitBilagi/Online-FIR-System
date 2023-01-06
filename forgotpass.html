@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Password</title>
+
+    <style>
+        body {
+    font-family: "Poppins", sans-serif;
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(124,3,135,0.79));
+}
+
+.main {
+    margin: auto;
+    margin-top: 70px; ;
+    width: 400px;
+    height: 550px;
+    border: 1px solid black;
+    background-color: rgb(1, 59, 99);
+    border-radius: 10px;
+}
+
+.forgot p {
+    color: white;
+    font-size: 2.4rem;
+}
+
+.forgot {
+    width: 300px;
+    margin: auto;
+}
+.aadhar {
+    margin-top: -20px;
+}
+
+input {
+    width: 296px;
+    font-family: "Poppins", sans-serif;
+    margin-left: 50px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif;
+}
+
+.otp {
+    transition: box-shadow .3s;
+    width: 300px;
+    margin-left: 50px;
+    height: 43px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgb(1, 255, 255);
+    font-size: large;
+}
+
+.otp:hover {
+    box-shadow: 0 0 35px rgba(1, 255, 255, 0.5);
+}
+
+.enterotp {
+    color: white;
+    width: fit-content;
+    margin: 50px;
+    margin-top: -10px;
+    font-family: "Poppins", sans-serif;
+    font-size: 23px;
+}
+
+.validate {
+    transition: box-shadow .3s;
+    width: 300px;
+    margin-left: 50px;
+    font-size: large;
+    height: 43px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgb(1, 255, 255);
+}
+
+.validate:hover {
+    box-shadow: 0 0 35px rgba(1, 255, 255, 0.5);
+}
+
+.otpbuttons {
+    width: 60px;
+    text-align: center;
+    font-size: 24px;
+    margin: 2px;
+    margin-left: 4px;
+    background-color: rgb(1, 59, 99);
+    border: 1px solid rgb(180, 111, 186);
+}
+
+.otpbuttons:hover {
+    box-shadow: 0 0 10px blue;
+}
+
+.otpbuttons:active {
+    border: 1px solid blue;
+}
+
+.otpbuttonsdiv {
+    width: 304px;
+    margin: auto;
+    margin-top: -30px;
+    margin-bottom: 30px;
+}
+    </style>
+
+</head>
+<body>
+    <div class="main">
+        <div class="forgot">
+            <p>FORGOT YOUR PASSWORD?</p>
+        </div>
+<form action="dashboard.html">
+    <div class="aadhar">
+        <input type="text" placeholder="Aadhar number" name="aadhar">
+    </div><br>
+    <div class="pass">
+        <input type="tel" placeholder="Phone number">    
+    </div><br>
+    <button class="otp" name="signin" >Submit</button>
+</form>
+    </div>
+</body>
+</html>

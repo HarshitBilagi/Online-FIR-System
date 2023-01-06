@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+.main::before{
+        content : " ";
+        position : absolute;
+        background : url("se2.jpg") no-repeat center center/cover;
+        background-size :100% ;
+        height : 100%;
+        width  :100%;
+    
+        z-index : -1; 
+        opacity : 0.5;
+    }
+    #navbar{
+        display : flex; 
+        position : sticky;
+        top : 0px;
+    }
+    #navbar ul{
+        display : flex;
+        margin-left  :1000px;
+    }
+    #navbar::before{
+        content : "";
+        background-color: rgba(70, 68, 66, 0.851);
+        position : absolute;
+        height : 125px;
+        width : 100%;
+        z-index : -1;
+        opacity : 0.9;
+    }
+    #navbar ul li{
+        font-family: "Poppins", sans-serif;
+        list-style: none;
+        font-size: 1.7rem;
+        align-items: right;
+    }
+    #navbar ul li a{
+        color : white;
+        display : block;
+        padding : 7px 22px;
+        border-radius: 20px;
+        text-decoration: none;
+    }
+    #navbar ul li a:hover{
+        color : black;
+        background-color: white;
+    }
+    .title{
+        font-size: 2.1rem;
+        font-family: "Poppins", sans-serif;
+        color :black;
+        text-shadow: blue;
+        margin-left : 24px;
+    }
+    .quote{
+        color : rgb(236, 112, 112);
+        font-size: 1.5rem;
+        font-family: "Poppins", sans-serif;
+        margin-left : 1094px;
+        margin-top : 200px;
+        height : 140px;
+        width : 330px;
+    }
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+    .foot::before{
+        content : "";
+        background-color: rgba(21, 20, 19, 0.851);
+        position : absolute;
+        height : 25px;
+        width : 100%;
+        z-index : -1;
+        opacity : 0.9;
+    }
+    .foot{
+        margin-top  : 160px;
+        color : white;
+    }
+    .foot p{
+        color : rgb(236, 227, 227);
+        margin-left : 1094px;
+    }
+</style>  
+    
+</head>
+<body>
+    <div class="main">
+        <nav id="navbar">
+            <ul>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    <div class="title">
+            <h1>Online  FIR</h1>
+    </div>
+    <div class="quote">
+        <p>Ask for help<br>Not because You are Weak<br>But because You want to remain Strong</p>
+    </div>
+    <div class="foot">
+       <marquee>We are here to help you</marquee>
+    </div>
+    </div>
+</body>
+</html>

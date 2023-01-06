@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About US</title>
+    <style>
+        .main::before{
+        content :'';
+        background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(124,3,135,0.79));
+        position : absolute;
+        height : 100%;
+        width : 100%;
+        z-index : -1;
+        opacity : 0.9;
+    }
+    .title{
+        text-align: center;
+        font-size: 1.3rem;
+        font-family: "Poppins", sans-serif;
+    }
+    .head::before{
+        content : '';
+        background-color: rgb(120, 112, 112);
+        position : absolute;
+        height :220px;
+        width : 100%;
+        z-index : -1;
+        opacity : 0.7;
+    }
+    .head p{
+        font-size: 1.5rem;
+        color : black;
+    }
+    .foot::before{
+        content : '';
+        background-color: rgba(154, 107, 18, 0.64);
+        position : absolute;
+        height :700px;
+        width : 100%;
+        z-index : -1;
+        opacity : 0.7;
+        margin-top: 30px;
+        border : 3px solid black;
+        border-radius: 10px;
+    }
+    #members{
+        margin : 34px;
+        display : flex;
+    }
+    #members .box{
+        border : 2px solid black;
+        padding : 34px;
+        margin : 2px 30px;
+        border-radius: 28px;
+        background: rgba(157, 161, 137, 0.622); 
+        margin-bottom: 10px;
+        margin-top : 36px;
+        width : 230px;
+    }
+    #members .box img{
+        height : 100px;
+        width : 150px;
+        display : block;
+        margin : auto;
+    }
+    #members .box p{
+        font-family: "Poppins", sans-serif;
+        font-size: 1.2rem;
+    }
+    h2{
+        font-family: "Poppins", sans-serif;
+    }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="title">
+            <h1>What can you do if the police refuse to register your FIR?</h1>
+            <h2>Online FIR will help you with this!!</h2>
+        </div>
+        <div class="head">
+            <p>Why should you file an FIR?
+                An FIR serves many purposes.<br><br>
+                It informs the police about an offence that has taken place and gives them all the relevant facts.<br>
+                It sets the criminal law in motion as police are duty bound to investigate FIRs.<br>
+                It provides proof in cases where insurance is involved.<br>
+                In the case of thefts, it protects the complainant from liabilities that could arise from the misuse of their property that was stolen<br></p>
+        </div>
+        <div class="foot">
+            <div id="members">
+                <div class="box">
+                    <img src="harshit.jpg" alt="Harshit Bilagi">
+                    <h2 class="text center">Harshit Bilagi</h2>
+                    <p class="center">3rd Sem CSE<br>SJBIT,Kengeri</p>
+                </div>
+                <div class="box">
+                    <img src="ayushi.jpg" alt="Ayushi Sinha">
+                    <h2 class="text center">Ayushi Sinha</h2>
+                    <p class="center">3rd Sem CSE<br>SJBIT,Kengeri</p>
+                </div>
+                <div class="box">
+                    <img src="abhinav.jpg" alt="Abhinav Prakash">
+                    <h2 class="text center">Abhinav Prakash</h2>
+                    <p class="center">3rd Sem CSE<br>SJBIT,Kengeri</p>
+                </div>
+                <div class="box">
+                    <img src="akash.jpg" alt="Akash Trivedee">
+                    <h2 class="text center">Akash Trivedee</h2>
+                    <p class="center">3rd Sem CSE<br>SJBIT,Kengeri</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
