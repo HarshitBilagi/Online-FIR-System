@@ -4,113 +4,276 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>Home Page</title>
     <style>
-.main::before{
-        content : " ";
-        position : absolute;
-        background : url("se2.jpg") no-repeat center center/cover;
-        background-size :100% ;
-        height : 100%;
-        width  :100%;
-    
-        z-index : -1; 
-        opacity : 0.5;
-    }
-    #navbar{
-        display : flex; 
-        position : sticky;
-        top : 0px;
-    }
-    #navbar ul{
-        display : flex;
-        margin-left  :1000px;
-    }
-    #navbar::before{
-        content : "";
-        background-color: rgba(70, 68, 66, 0.851);
-        position : absolute;
-        height : 125px;
-        width : 100%;
-        z-index : -1;
-        opacity : 0.9;
-    }
-    #navbar ul li{
-        font-family: "Poppins", sans-serif;
-        list-style: none;
-        font-size: 1.7rem;
-        align-items: right;
-    }
-    #navbar ul li a{
-        color : white;
-        display : block;
-        padding : 7px 22px;
-        border-radius: 20px;
-        text-decoration: none;
-    }
-    #navbar ul li a:hover{
-        color : black;
-        background-color: white;
-    }
+    *{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Times New Roman', Times, serif;
+  box-sizing: border-box;
+}
+body{
+  background : url("images/background.jpg") no-repeat center center/cover;
+  background-size: cover;
+  width: 100%;
+}
+nav{
+  top: 0;
+  position: fixed;
+  background: #c6cdd5;
+  height: 80px;
+  width: 100%;
+  z-index: 999;
+}
+label.logo{
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: black;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+a.active,a:hover{
+  background: #1b9bff;
+  transition: .5s;
+  color: white;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 952px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px) {
+  .checkbtn {
+    display: block;
+  }
+  ul {
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  a:hover,
+  a.active {
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+
+section{
+  background: url(bg1.jpg) no-repeat;
+  background-size: cover;
+  height: calc(100vh - 80px);
+}
     .title{
         font-size: 2.1rem;
-        font-family: "Poppins", sans-serif;
+        width: fit-content;
+        font-family: 'Times New Roman', Times, serif;
+
         color :black;
-        text-shadow: blue;
+        text-shadow: 0px 0px 100px whitesmoke;
         margin-left : 24px;
+        margin-top: 241px;
     }
     .quote{
-        color : rgb(236, 112, 112);
-        font-size: 1.5rem;
-        font-family: "Poppins", sans-serif;
-        margin-left : 1094px;
-        margin-top : 200px;
+      position: relative;
+        color : rgb(0, 0, 0);
+        font-size: 1.3rem;
+        font-family: 'Times New Roman', Times, serif;
+
+        margin-left : 2%;
+        margin-top : 30px;
         height : 140px;
         width : 330px;
     }
 
 h1 {
-    font-family: 'Times New Roman', Times, serif;
+  font-family: 'Times New Roman', Times, serif;
 }
 
-    .foot::before{
-        content : "";
-        background-color: rgba(21, 20, 19, 0.851);
-        position : absolute;
-        height : 25px;
-        width : 100%;
-        z-index : -1;
-        opacity : 0.9;
-    }
-    .foot{
-        margin-top  : 160px;
-        color : white;
-    }
-    .foot p{
-        color : rgb(236, 227, 227);
-        margin-left : 1094px;
-    }
+
+    footer{
+      font-family: 'Times New Roman', Times, serif;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #c6cdd5;
+  background-size: cover;
+  backdrop-filter: blur(8px);
+  height: 240px;
+  width: 100vw;
+  padding-top: 40px;
+  color: black;
+}
+.footer-content{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: max-content;
+}
+.footer-content h3{
+  font-size: 3.5em;
+  font-family: 'Times New Roman', Times, serif;
+
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 3rem;
+  color: black;
+}
+.footer-content p{
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 1.2em;
+}
+.socials{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  margin: 1rem 0 2rem 0;
+}
+.socials li{
+  margin: 0 10px;
+}
+.socials a{
+  text-decoration: none;
+  color: #000000;
+}
+.socials a i{
+  font-size: 2em;
+  transition: color .4s ease;
+}
+
+
+.footer-bottom{
+  background: #000;
+  color: white;
+  width: 100vw;
+  height: 34px;
+  padding: 10px 0;
+  text-align: center;
+}
+.footer-bottom p{
+  font-size: 14px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+}
+.footer-bottom span{
+  text-transform: uppercase;
+  opacity: .4;
+  font-weight: 800;
+  color: #5edef7;
+}
 </style>  
     
 </head>
 <body>
-    <div class="main">
-        <nav id="navbar">
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+              <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo"></label>
             <ul>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="signup.html">Sign Up</a></li>
-                <li><a href="about.html">About</a></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="login.html">Login</a></li>
+              <li><a href="signup.html">Sign Up</a></li>
+              <li><a href="about.html">About</a></li>
             </ul>
-        </nav>
+          </nav>
     <div class="title">
-            <h1>Online  FIR</h1>
+            <h1>Online-FIR System</h1>
     </div>
     <div class="quote">
-        <p>Ask for help<br>Not because You are Weak<br>But because You want to remain Strong</p>
+        <pre>Seek justice, empower change. 
+Online-FIR: Bridging the gap between victims and justice, one report at a time.</pre>
     </div>
-    <div class="foot">
-       <marquee>We are here to help you</marquee>
-    </div>
-    </div>
+    <footer>
+      <div class="footer-content">
+        <h3>Online-FIR</h3>
+        <br />
+        <p>
+          We are here to help you!
+        </p>
+        <br />
+        <ul class="socials">
+          <li>
+            <a href="#" target="_blank"
+              ><i class="fa fa-instagram"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#" target="_blank"
+              ><i class="fa fa-twitter"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="#"
+              target="_blank"
+              ><i class="fa fa-linkedin"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <p>copyright &copy;2022.</span></p>
+      </div>
+    </footer>
 </body>
 </html>

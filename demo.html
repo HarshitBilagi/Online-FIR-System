@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <title>Signup</title>
+  <style>
+        *{
+    margin : 0;
+    padding : 0;
+}
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+nav{
+  background: #c6cdd5;
+  height: 80px;
+  width: 100%;
+}
+label.logo{
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+nav ul{
+  float: right;
+  margin-right: 50px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: black;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+a.active,a:hover{
+  background: #1b9bff;
+  transition: .5s;
+  color: white;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 952px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+
+    .container {
+      max-width: 400px;
+      margin: 100px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    form {
+      margin-top: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    input[type="password"] {
+      width: 94%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    *,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+input[type="date"],
+input[type="time"]{
+    background-color: white;
+    /* position: absolute; */
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    font-family: "Roboto Mono",monospace;
+    color: black;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 30px;
+    margin-left: 82px;
+}
+input[type="time"]{
+    margin-left: 70px;
+}
+::-webkit-calendar-picker-indicator{
+    background-color: #ffffff;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+    .btn-signup {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #4b2ede;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn-signup:hover {
+      background-color: #45a049;
+    }
+
+    .options {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .options a {
+      color: #4b2ede;
+      text-decoration: none;
+    }
+
+    .separator {
+      margin: 0 10px;
+      color: #999;
+    }
+    .DateAndTime {
+        display: flex;
+    }
+    .dateDiv {
+        width: 200px;
+    }
+    .timeDiv {
+        width: 200px;
+    }
+    .emergencyButton {
+        margin-top: 20px;
+    }
+    /* .typeofcomplaint{
+        height: 100px;
+        width: 100px;
+    } */
+  </style>
+</head>
+<body>
+        <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo"></label>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+  <div class="container">
+    <h1>CASE FORM</h1>
+    <form action="signup.php" method="post">
+      <div class="form-group">
+        <label for="firstname">First name</label>
+        <input type="text" id="firstname" name="firstname" placeholder="Enter your first name" required>
+      </div>
+      <div class="form-group">
+        <label for="lastname">Last name</label>
+        <input type="text" id="lastname" name="lastname" placeholder="Enter your last name" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Gender</label>
+        <input type="radio" id="gender" name="gender" required>Male
+        <input type="radio" id="gender" name="gender" required>Female
+        <input type="radio" id="gender" name="gender" required>Others
+      </div>
+      <!-- <div class="typeofcomplaint">
+        <td>Type of complain</td>
+        <td>
+        <select name="type" id="complain_type" required >
+            <option value="choose" placeholder="select"></option>
+        <option value="theft">theft</option>
+        <option value="murder">murder</option>
+        <option value="molestation">molestation</option>
+      </div> -->
+      <div class="DateAndTime">
+        <div class="dateDiv form-group">
+            <label for="Date">Date of Incident</label>
+            <input type="date" id="email" name="date" required>
+          </div>
+          <div class="timeDiv form-group">
+            <label for="time">Time of Incident</label>
+            <input type="time" id="email" name="time" required>
+          </div>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+      </div>
+      <div class="form-group">
+        <label for="aadhar">Aadhar Number</label>
+        <input type="text" id="aadhar" name="aadhar" placeholder="Enter your Aadhar number" required>
+      </div>
+      <div class="form-group">
+        <label for="city">City</label>
+        <input type="text" id="city" name="city" placeholder="Enter your city" required>
+      </div>
+      <div class="form-group">
+        <label for="pincode">Pin code</label>
+        <input type="number" id="pincode" name="pincode" placeholder="Enter your Pin code" required>
+      </div>
+      <div class="form-group">
+        <label for="state">State</label>
+        <input type="text" id="state" name="state" placeholder="Enter your state" required>
+      </div>
+      <div class="form-group">
+      <button type="submit" name="signup" class="btn-signup">Sign Up</button>
+      <button type="submit" name="emergency" class="btn-signup emergencyButton">Emergency Contact</button>
+      </div>
+      </form>
+        </div>
+      </body>
+      </html>
