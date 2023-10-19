@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   <title>Login</title>
   <style>
     *{
@@ -167,6 +171,83 @@ input[type="password"] {
   color: #777;
   text-decoration: none;
 }
+footer    {
+      font-family: 'Times New Roman', Times, serif;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #c6cdd5;
+  background-size: cover;
+  backdrop-filter: blur(8px);
+  height: 240px;
+  width: 100vw;
+  padding-top: 40px;
+  color: black;
+}
+.footer-content{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: max-content;
+}
+.footer-content h3{
+  font-size: 3.5em;
+  font-family: 'Times New Roman', Times, serif;
+
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 3rem;
+  color: black;
+}
+.footer-content p{
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 1.2em;
+}
+.socials{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  margin: 1rem 0 2rem 0;
+}
+.socials li{
+  margin: 0 10px;
+}
+.socials a{
+  text-decoration: none;
+  color: #000000;
+}
+.socials a i{
+  font-size: 2em;
+  transition: color .4s ease;
+}
+
+
+.footer-bottom{
+  background: #000;
+  color: white;
+  width: 100vw;
+  height: 34px;
+  padding: 10px 0;
+  text-align: center;
+}
+.footer-bottom p{
+  font-size: 14px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+}
+.footer-bottom span{
+  text-transform: uppercase;
+  opacity: .4;
+  font-weight: 800;
+  color: #5edef7;
+}
 
   </style>
 </head>
@@ -194,6 +275,7 @@ input[type="password"] {
       <div class="form-group">
         <label for="password">Password</label>
         <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
       </div>
       <div class="form-group">
         <button id="p" type="submit" name="login-submit" class="btn-login">Login</button>
@@ -204,5 +286,37 @@ input[type="password"] {
       <a href="signup.html">New user? Create an account</a>
     </div>
   </div>
+  <footer>
+    <div class="footer-content">
+      <h3>Online-FIR</h3>
+      <br />
+      <p>
+        We are here to help you!
+      </p>
+      <br />
+      <ul class="socials">
+        <li>
+          <a href="#" target="_blank"
+            ><i class="fa fa-instagram"></i
+          ></a>
+        </li>
+        <li>
+          <a href="#" target="_blank"
+            ><i class="fa fa-twitter"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            href="#"
+            target="_blank"
+            ><i class="fa fa-linkedin"></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <p>copyright &copy;2022.</span></p>
+    </div>
+  </footer>
 </body>
 </html>

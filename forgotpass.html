@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>Forgot Password</title>
     <style>
       body {
@@ -22,7 +27,65 @@
         border-radius: 5px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       }
-
+      nav{
+  top: 0;
+  position: fixed;
+  background: #c6cdd5;
+  height: 80px;
+  width: 100%;
+  z-index: 999;
+}
+label.logo{
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+  margin-top: 0;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: black;
+  font-size: 17px;
+  padding: 7px 13px;
+  text-decoration: none;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+a.active,a:hover{
+  background: #1b9bff;
+  transition: .5s;
+  color: white;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 952px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
       h1 {
         text-align: center;
         color: #333;
@@ -75,9 +138,99 @@
         color: #777;
         text-decoration: none;
       }
+      footer    {
+      font-family: 'Times New Roman', Times, serif;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #c6cdd5;
+  background-size: cover;
+  backdrop-filter: blur(8px);
+  height: 240px;
+  width: 100vw;
+  padding-top: 40px;
+  color: black;
+}
+.footer-content{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: max-content;
+}
+.footer-content h3{
+  font-size: 3.5em;
+  font-family: 'Times New Roman', Times, serif;
+
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 3rem;
+  color: black;
+}
+.footer-content p{
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 1.2em;
+}
+.socials{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  margin: 1rem 0 2rem 0;
+}
+.socials li{
+  margin: 0 10px;
+}
+.socials a{
+  text-decoration: none;
+  color: #000000;
+}
+.socials a i{
+  font-size: 2em;
+  transition: color .4s ease;
+}
+
+
+.footer-bottom{
+  background: #000;
+  color: white;
+  width: 100vw;
+  height: 34px;
+  padding: 10px 0;
+  text-align: center;
+}
+.footer-bottom p{
+  font-size: 14px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+}
+.footer-bottom span{
+  text-transform: uppercase;
+  opacity: .4;
+  font-weight: 800;
+  color: #5edef7;
+}
     </style>
   </head>
   <body>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo"></label>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
     <div class="container">
       <h1>Reset Password</h1>
       <form action="dashboard.html">
@@ -111,5 +264,37 @@
         <a href="signup.html">New user? Create an account</a>
       </div>
     </div>
+    <footer>
+      <div class="footer-content">
+        <h3>Online-FIR</h3>
+        <br />
+        <p>
+          We are here to help you!
+        </p>
+        <br />
+        <ul class="socials">
+          <li>
+            <a href="#" target="_blank"
+              ><i class="fa fa-instagram"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#" target="_blank"
+              ><i class="fa fa-twitter"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="#"
+              target="_blank"
+              ><i class="fa fa-linkedin"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <p>copyright &copy;2022.</span></p>
+      </div>
+    </footer>
   </body>
 </html>

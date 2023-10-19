@@ -1,33 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About US</title>
-    <style>
-        .main::before{
-        content :'';
-        background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(124,3,135,0.79));
-        position : absolute;
-        height : 100%;
-        width : 100%;
-        z-index : -1;
-        opacity : 0.9;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  <title>Why Online FIR</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
     }
-    *{
-  padding: 0;
-  margin: 0;
-  text-decoration: none;
-  list-style: none;
-  box-sizing: border-box;
-}
-nav{
-    top: 0;
-    position: fixed;
+    .container {
+      max-width: 600px;
+      margin: 130px auto;
+      padding: 0 20px;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    .container p {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+    nav{
+  top: 0;
+  position: fixed;
   background: #c6cdd5;
   height: 80px;
   width: 100%;
+  z-index: 999;
 }
 label.logo{
   color: white;
@@ -39,6 +47,7 @@ label.logo{
 nav ul{
   float: right;
   margin-right: 20px;
+  margin-top: 0;
 }
 nav ul li{
   display: inline-block;
@@ -49,6 +58,7 @@ nav ul li a{
   color: black;
   font-size: 17px;
   padding: 7px 13px;
+  text-decoration: none;
   border-radius: 3px;
   text-transform: uppercase;
 }
@@ -69,156 +79,144 @@ a.active,a:hover{
 #check{
   display: none;
 }
-@media (max-width: 952px){
-  label.logo{
-    font-size: 30px;
-    padding-left: 50px;
-  }
-  nav ul li a{
-    font-size: 16px;
-  }
+footer    {
+  font-family: 'Times New Roman', Times, serif;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #c6cdd5;
+  background-size: cover;
+  backdrop-filter: blur(8px);
+  height: 200px;
+  width: 100vw;
+  padding-top: 40px;
+  color: black;
 }
-@media (max-width: 858px){
-  .checkbtn{
-    display: block;
-  }
-  ul{
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: #2c3e50;
-    top: 80px;
-    left: -100%;
-    text-align: center;
-    transition: all .5s;
-  }
-  nav ul li{
-    display: block;
-    margin: 50px 0;
-    line-height: 30px;
-  }
-  nav ul li a{
-    font-size: 20px;
-  }
-  a:hover,a.active{
-    background: none;
-    color: #0082e6;
-  }
-  #check:checked ~ ul{
-    left: 0;
-  }
+.footer-content{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: fit-content;
+}
+.footer-content h3{
+  font-size: 3.5em;
+  font-family: 'Times New Roman', Times, serif;
+
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 3rem;
+  color: black;
+}
+.footer-content p{
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 1.2em;
+}
+.socials{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  margin: 1rem 0 2rem 0;
+}
+.socials li{
+  margin: 0 10px;
+}
+.socials a{
+  text-decoration: none;
+  color: #000000;
+}
+.socials a i{
+  font-size: 2em;
+  transition: color .4s ease;
 }
 
-    .title{
-        text-align: center;
-        font-size: 1.3rem;
-        font-family: "Poppins", sans-serif;
-    }
-    .head::before{
-        content : '';
-        background-color: rgb(120, 112, 112);
-        position : absolute;
-        height :220px;
-        width : 100%;
-        z-index : -1;
-        opacity : 0.7;
-    }
-    .head p{
-        font-size: 1.5rem;
-        color : black;
-    }
-    .foot::before{
-        content : '';
-        background-color: rgba(154, 107, 18, 0.64);
-        position : absolute;
-        height :700px;
-        width : 100%;
-        z-index : -1;
-        opacity : 0.7;
-        margin-top: 30px;
-        border : 3px solid black;
-        border-radius: 10px;
-    }
-    #members{
-        margin : 34px;
-        display : flex;
-    }
-    #members .box{
-        border : 2px solid black;
-        padding : 34px;
-        margin : 2px 30px;
-        border-radius: 28px;
-        background: rgba(157, 161, 137, 0.622); 
-        margin-bottom: 10px;
-        margin-top : 36px;
-        width : 230px;
-    }
-    #members .box img{
-        height : 100px;
-        width : 150px;
-        display : block;
-        margin : auto;
-    }
-    #members .box p{
-        font-family: "Poppins", sans-serif;
-        font-size: 1.2rem;
-    }
-    h2{
-        font-family: "Poppins", sans-serif;
-    }
-    </style>
+
+.footer-bottom{
+  background: #000;
+  color: white;
+  width: 100vw;
+  height: 34px;
+  padding: 10px 0;
+  text-align: center;
+}
+.footer-bottom p{
+  font-size: 14px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+}
+.footer-bottom span{
+  text-transform: uppercase;
+  opacity: .4;
+  font-weight: 800;
+  color: #5edef7;
+}
+</style>
 </head>
 <body>
-    <nav>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-          <i class="fas fa-bars"></i>
-        </label>
-        <label class="logo"></label>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="login.html">Login</a></li>
-          <li><a href="signup.html">Sign Up</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
-      </nav>
-    <div class="main">
-        <div class="title">
-            <h1>What can you do if the police refuse to register your FIR?</h1>
-            <h2>Online FIR will help you with this!!</h2>
-        </div>
-        <div class="head">
-            <p>Why should you file an FIR?
-                An FIR serves many purposes.<br><br>
-                It informs the police about an offence that has taken place and gives them all the relevant facts.<br>
-                It sets the criminal law in motion as police are duty bound to investigate FIRs.<br>
-                It provides proof in cases where insurance is involved.<br>
-                In the case of thefts, it protects the complainant from liabilities that could arise from the misuse of their property that was stolen<br></p>
-        </div>
-        <div class="foot">
-            <div id="members">
-                <div class="box">
-                    <img src="images/harshit.jpg" alt="Harshit Bilagi">
-                    <h2 class="text center">Harshit Bilagi</h2>
-                    <p class="center">3rd Sem CSE<br>SJBIT,Kengeri</p>
-                </div>
-                <div class="box">
-                    <img src="images/ayushi.jpg" alt="Ayushi Sinha">
-                    <h2 class="text center">Ayushi Sinha</h2>
-                    <p class="center">3rd Sem CSE<br>SJBIT,Kengeri</p>
-                </div>
-                <div class="box">
-                    <img src="images/abhinav.jpg" alt="Abhinav Prakash">
-                    <h2 class="text center">Abhinav Prakash</h2>
-                    <p class="center">3rd Sem CSE<br>SJBIT,Kengeri</p>
-                </div>
-                <div class="box">
-                    <img src="images/akash.jpg" alt="Akash Trivedee">
-                    <h2 class="text center">Akash Trivedee</h2>
-                    <p class="center">3rd Sem CSE<br>SJBIT,Kengeri</p>
-                </div>
-            </div>
-        </div>
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo"></label>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="signup.html">Sign Up</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <h1>Why Online FIR</h1>
+    <p>An online FIR (First Information Report) system offers numerous advantages:</p>
+    <ul>
+      <li><strong>Convenience:</strong> Online FIR eliminates the need to physically visit a police station, allowing users to report crimes and file complaints from the comfort of their own homes.</li>
+      <li><strong>Time-saving:</strong> By reducing paperwork and manual processes, online FIR saves valuable time for both the users and the law enforcement authorities.</li>
+      <li><strong>Accessibility:</strong> Online FIR enables individuals to report incidents at any time, making the process more accessible and convenient for victims, witnesses, and concerned citizens.</li>
+      <li><strong>Efficiency:</strong> Digitalizing the FIR process streamlines information collection, documentation, and record-keeping, leading to improved efficiency in handling cases.</li>
+      <li><strong>Accuracy:</strong> Online FIR systems help minimize errors and omissions by providing structured forms and validation mechanisms, ensuring accurate information is captured.</li>
+      <li><strong>Transparency:</strong> By enabling users to track the progress of their FIRs and providing updates on case status, online systems promote transparency in the law enforcement process.</li>
+      <li><strong>Secure Storage:</strong> Digital storage of FIR records ensures their safety and allows for easier retrieval, reducing the risk of loss or damage.</li>
+    </ul>
+    <p>With these benefits, an online FIR system offers a more efficient, accessible, and user-friendly approach to reporting crimes and seeking justice.</p>
+  </div>
+  <footer>
+    <div class="footer-content">
+      <h3>Online-FIR</h3>
+      <br />
+      <p>
+        We are here to help you!
+      </p>
+      <br />
+      <ul class="socials">
+        <li>
+          <a href="#" target="_blank"
+            ><i class="fa fa-instagram"></i
+          ></a>
+        </li>
+        <li>
+          <a href="#" target="_blank"
+            ><i class="fa fa-twitter"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            href="#"
+            target="_blank"
+            ><i class="fa fa-linkedin"></i
+          ></a>
+        </li>
+      </ul>
     </div>
+    <div class="footer-bottom">
+      <p>copyright &copy;2022.</span></p>
+    </div>
+  </footer>
 </body>
 </html>
